@@ -37,6 +37,7 @@
 }
 html{scroll-behavior:smooth}
 body{background:var(--ink); color:var(--fg); font-family:var(--fb); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:clip}
+body.menu-open{overflow:hidden}
 img{display:block; max-width:100%; height:auto}
 a{color:inherit; text-decoration:none}
 button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
@@ -97,11 +98,16 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
 /* mobil menü */
 .menu{position:fixed; inset:0; z-index:1100; background:var(--ink3); padding:96px var(--pad) 40px; display:flex; flex-direction:column; gap:8px; visibility:hidden; opacity:0; transition:opacity .4s, visibility .4s}
 .menu-open .menu{visibility:visible; opacity:1}
-.menu a.mlink{font-family:var(--fd); text-transform:uppercase; font-size:clamp(22px,6vw,34px); line-height:1.3; display:flex; gap:14px; align-items:baseline; padding-block:5px}
+.menu .mclose{position:absolute; top:14px; right:calc(var(--pad) - 12px); width:46px; height:46px; display:grid; place-items:center; color:var(--fg)}
+.menu .mclose svg{display:block}
+.menu .mclose:hover{color:var(--cop2)}
+.menu a.mlink{font-family:var(--fd); text-transform:uppercase; font-size:clamp(24px,6.6vw,36px); line-height:1.25; display:flex; gap:14px; align-items:baseline; padding-block:9px}
+.menu a.mlink:first-of-type{margin-top:auto}
 .menu a.mlink small{font-family:var(--fm); font-size:12px; color:var(--cop2)}
 .menu .mfoot{margin-top:auto; border-top:1px solid var(--hair2); padding-top:20px; display:grid; gap:10px}
 .menu .mfoot a{font-family:var(--fm); font-size:14px; color:var(--dim)}
 .menu .mfoot a b{color:var(--fg); font-weight:500}
+@media(max-width:879px){.menu{padding-bottom:calc(64px + env(safe-area-inset-bottom) + 57px)}}
 
 /* ---------- HERO ---------- */
 .hero{position:relative; min-height:100svh; display:flex; flex-direction:column; justify-content:flex-end; overflow:hidden}
@@ -383,6 +389,9 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
 </header>
 
 <nav class="menu" id="menu" aria-label="Mobil menü">
+  <button class="mclose" type="button" aria-label="Menü bezárása">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
   <a class="mlink" href="#szolgaltatasok"><small>01</small>Szolgáltatások</a>
   <a class="mlink" href="#referenciak"><small>02</small>Referenciák</a>
   <a class="mlink" href="#rolunk"><small>03</small>Rólunk</a>
@@ -773,6 +782,7 @@ function setMenu(open){
   burger.setAttribute('aria-label',open?'Menü bezárása':'Menü megnyitása');
 }
 burger.addEventListener('click',function(){setMenu(!document.body.classList.contains('menu-open'))});
+var mclose=$('.mclose'); if(mclose)mclose.addEventListener('click',function(){setMenu(false)});
 $$('.menu a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
 window.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
 
