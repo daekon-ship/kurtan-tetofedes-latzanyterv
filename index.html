@@ -59,7 +59,10 @@ h1,h2,h3{font-family:var(--fd); font-weight:400; text-transform:uppercase; line-
 [data-reveal].in{opacity:1; transform:none}
 .tline{display:block; overflow:hidden; padding-block:.1em .14em; margin-block:-.1em -.14em}
 .tline>span{display:block; transform:translateY(115%); transition:transform .9s var(--ease)}
-.in .tline>span{transform:none}
+.in .tline>span, .tline.in>span{transform:none}
+@media (max-width:700px){
+  .tline>span{transform:none}
+}
 
 /* gombok */
 .btn{display:inline-flex; align-items:center; justify-content:center; gap:12px; font-family:var(--fm); font-size:13px; letter-spacing:.14em; text-transform:uppercase; padding:16px 26px; border:1px solid transparent; transition:background .3s, border-color .3s, color .3s; min-height:52px}
@@ -387,7 +390,7 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
   </div>
   <div class="hero-scrim" aria-hidden="true"></div>
   <div class="hero-in">
-    <p class="eyebrow"><span><b class="n">01</b> Tetőfedő mester</span><span class="rule" aria-hidden="true"></span></p>
+    <p class="eyebrow"><span>Tetőfedő mester</span><span class="rule" aria-hidden="true"></span></p>
     <h1>
       <span class="tline" style="--d:.1s"><span>Nem csak <span class="cop">tetőt</span></span></span>
       <span class="tline" style="--d:.22s"><span>építünk.</span></span>
@@ -754,7 +757,7 @@ $$('.menu a').forEach(function(a){a.addEventListener('click',function(){setMenu(
 window.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
 
 /* reveal */
-var targets=$$('.js-in, [data-reveal]');
+var targets=$$('.js-in, [data-reveal], .tline');
 if('IntersectionObserver' in window && !reduced){
   var io=new IntersectionObserver(function(es){
     es.forEach(function(en){ if(en.isIntersecting){en.target.classList.add('in'); io.unobserve(en.target)} })
