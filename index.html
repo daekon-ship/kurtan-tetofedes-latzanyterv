@@ -8,6 +8,12 @@
 <meta property="og:title" content="Kurtán Károly — Tetőfedés | Nem csak tetőt építünk. Otthont védünk.">
 <meta property="og:description" content="Tetőfedés, tetőfelújítás, kéményjavítás és bádogozás — 20+ év szakmai tapasztalattal, Hajdúsámson és környékén.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://daekon-ship.github.io/kurtan-tetofedes-latzanyterv/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80">
+<meta property="og:locale" content="hu_HU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#111315">
+<link rel="canonical" href="https://daekon-ship.github.io/kurtan-tetofedes-latzanyterv/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23111315'/%3E%3Crect x='41' y='13' width='7' height='20' fill='%23C85A2A'/%3E%3Cpath d='M6 44 L32 18 L58 44 L50 44 L32 26 L14 44 Z' fill='%23EDEAE3'/%3E%3Cpath d='M12 52 H52' stroke='%23C85A2A' stroke-width='3'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -84,8 +90,10 @@ h1,h2,h3{font-family:var(--fd); font-weight:400; text-transform:uppercase; line-
 .brand .bt i{display:block; font-style:normal; font-family:var(--fm); font-size:11.5px; letter-spacing:.24em; color:var(--cop2); font-weight:500; margin-top:3px}
 .brand .bt small{display:block; font-size:10.5px; color:#C9C4BA; letter-spacing:.04em; margin-top:3px}
 .nav{display:none; gap:30px}
-.nav a{font-family:var(--fm); font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--dim)}
+.nav a{font-family:var(--fm); font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--dim); position:relative; transition:color .3s}
 .nav a:hover{color:var(--fg)}
+.nav a.on{color:var(--fg)}
+.nav a.on::after{content:""; position:absolute; left:0; right:0; bottom:-7px; height:1px; background:var(--cop)}
 .header .phone{display:none}
 .header .btn{display:none; padding:12px 20px; min-height:44px}
 .burger{width:46px; height:46px; position:relative; flex:none}
@@ -325,7 +333,7 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
 .mbar svg{flex:none}
 @media(min-width:880px){.mbar{display:none}}
 @media(max-width:879px){
-  body{padding-bottom:57px}
+  body{padding-bottom:calc(57px + env(safe-area-inset-bottom))}
   .hero{min-height:auto}
   .hero-in{padding-top:104px; padding-bottom:0}
   .hero-in::before{background:
@@ -358,6 +366,7 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
   .house .draw{stroke-dashoffset:0}
 }
 </style>
+<noscript><style>[data-reveal]{opacity:1 !important; transform:none !important}.tline>span{transform:none !important}.house .draw{stroke-dashoffset:0 !important}</style></noscript>
 </head>
 <body>
 <a class="skip" href="#ajanlat" style="position:fixed; top:-60px; left:16px; z-index:2000; background:var(--cop); color:#fff; padding:12px 20px; font-family:var(--fm); font-size:12px; transition:top .3s" onfocus="this.style.top='16px'" onblur="this.style.top='-60px'">Ugrás az ajánlatkéréshez</a>
@@ -407,7 +416,9 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
 <!-- HERO -->
 <section class="hero" id="hero">
   <div class="hero-bg" aria-hidden="true">
-    <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=2200&q=80" alt="" width="2200" height="1467" fetchpriority="high"
+    <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=2200&q=80"
+      srcset="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=640&q=75 640w, https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1100&q=78 1100w, https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1600&q=80 1600w, https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=2200&q=80 2200w"
+      sizes="100vw" alt="" width="2200" height="1467" fetchpriority="high"
       onerror="this.onerror=null;this.src='https://picsum.photos/seed/kk-hero4/2200/1467'">
   </div>
   <div class="hero-scrim" aria-hidden="true"></div>
@@ -568,7 +579,9 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
 <!-- 20+ ÉV -->
 <section class="decades" id="evek">
   <div class="bg" aria-hidden="true">
-    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=70" alt="" loading="lazy" width="1800" height="1200" onerror="this.onerror=null;this.src='https://picsum.photos/seed/kk-dec2/1800/1200'">
+    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=70" alt="" loading="lazy" decoding="async" width="1800" height="1200"
+      srcset="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=68 900w, https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1300&q=70 1300w, https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=70 1800w"
+      sizes="100vw" onerror="this.onerror=null;this.src='https://picsum.photos/seed/kk-dec2/1800/1200'">
   </div>
   <div class="wrap js-in">
     <div class="dec-num" data-reveal><span>20</span><b>+</b></div>
@@ -785,6 +798,19 @@ burger.addEventListener('click',function(){setMenu(!document.body.classList.cont
 var mclose=$('.mclose'); if(mclose)mclose.addEventListener('click',function(){setMenu(false)});
 $$('.menu a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
 window.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+
+/* nav scrollspy */
+var navLinks=$$('.nav a');
+if('IntersectionObserver' in window && navLinks.length){
+  var spy=new IntersectionObserver(function(es){
+    es.forEach(function(en){
+      if(en.isIntersecting){
+        navLinks.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+en.target.id)});
+      }
+    });
+  },{rootMargin:'-40% 0px -55% 0px'});
+  navLinks.forEach(function(a){var s=document.querySelector(a.getAttribute('href')); if(s)spy.observe(s)});
+}
 
 /* reveal */
 var targets=$$('.js-in, [data-reveal], .tline');
