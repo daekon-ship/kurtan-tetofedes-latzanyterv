@@ -36,7 +36,7 @@
   --ease:cubic-bezier(.22,1,.36,1);
 }
 html{scroll-behavior:smooth}
-body{background:var(--ink); color:var(--fg); font-family:var(--fb); font-size:17px; line-height:1.65; -webkit-font-smoothing:antialiased; overflow-x:clip}
+body{background:var(--ink); color:var(--fg); font-family:var(--fb); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:clip}
 img{display:block; max-width:100%; height:auto}
 a{color:inherit; text-decoration:none}
 button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
@@ -49,7 +49,7 @@ section[id],footer[id]{scroll-margin-top:74px; overflow-x:clip}
 ::-webkit-scrollbar-thumb{background:#33383d; border:2px solid var(--ink3)}
 
 h1,h2,h3{font-family:var(--fd); font-weight:400; text-transform:uppercase; line-height:1.02; letter-spacing:.005em; overflow-wrap:break-word}
-.eyebrow{display:flex; flex-wrap:wrap; align-items:center; gap:12px; row-gap:6px; font-family:var(--fm); font-size:12.5px; letter-spacing:.22em; color:var(--dim); text-transform:uppercase}
+.eyebrow{display:flex; flex-wrap:wrap; align-items:center; gap:12px; row-gap:6px; font-family:var(--fm); font-size:11.5px; letter-spacing:.2em; color:var(--dim); text-transform:uppercase}
 .eyebrow .n{color:var(--cop2)}
 .eyebrow .rule{flex:1 1 60px; min-width:56px; height:1px; background:var(--hair2)}
 .sec{padding-block:var(--sec)}
@@ -65,7 +65,7 @@ h1,h2,h3{font-family:var(--fd); font-weight:400; text-transform:uppercase; line-
 }
 
 /* gombok */
-.btn{display:inline-flex; align-items:center; justify-content:center; gap:12px; font-family:var(--fm); font-size:13px; letter-spacing:.14em; text-transform:uppercase; padding:16px 26px; border:1px solid transparent; transition:background .3s, border-color .3s, color .3s; min-height:52px}
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:10px; font-family:var(--fm); font-size:12px; letter-spacing:.12em; text-transform:uppercase; padding:13px 22px; border:1px solid transparent; transition:background .3s, border-color .3s, color .3s; min-height:46px}
 .btn svg{flex:none}
 .btn-solid{background:var(--cop); color:#17110B; font-weight:500}
 .btn-solid:hover{background:var(--cop2)}
@@ -79,7 +79,7 @@ h1,h2,h3{font-family:var(--fd); font-weight:400; text-transform:uppercase; line-
 .header.scrolled .hin{padding-block:8px}
 .brand{display:flex; align-items:center; gap:12px; margin-right:auto; min-width:0}
 .brand .bt{min-width:0}
-.brand .bt b{display:block; font-family:var(--fd); font-size:16px; letter-spacing:.05em; text-transform:uppercase; line-height:1.15}
+.brand .bt b{display:block; font-family:var(--fd); font-size:14.5px; letter-spacing:.05em; text-transform:uppercase; line-height:1.15}
 .brand .bt i{display:block; font-style:normal; font-family:var(--fm); font-size:11.5px; letter-spacing:.24em; color:var(--cop2); font-weight:500; margin-top:3px}
 .brand .bt small{display:block; font-size:10.5px; color:#C9C4BA; letter-spacing:.04em; margin-top:3px}
 .nav{display:none; gap:30px}
@@ -97,7 +97,7 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
 /* mobil menü */
 .menu{position:fixed; inset:0; z-index:1100; background:var(--ink3); padding:96px var(--pad) 40px; display:flex; flex-direction:column; gap:8px; visibility:hidden; opacity:0; transition:opacity .4s, visibility .4s}
 .menu-open .menu{visibility:visible; opacity:1}
-.menu a.mlink{font-family:var(--fd); text-transform:uppercase; font-size:clamp(28px,8vw,44px); line-height:1.25; display:flex; gap:14px; align-items:baseline; padding-block:6px}
+.menu a.mlink{font-family:var(--fd); text-transform:uppercase; font-size:clamp(22px,6vw,34px); line-height:1.3; display:flex; gap:14px; align-items:baseline; padding-block:5px}
 .menu a.mlink small{font-family:var(--fm); font-size:12px; color:var(--cop2)}
 .menu .mfoot{margin-top:auto; border-top:1px solid var(--hair2); padding-top:20px; display:grid; gap:10px}
 .menu .mfoot a{font-family:var(--fm); font-size:14px; color:var(--dim)}
@@ -111,9 +111,9 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
   linear-gradient(180deg, rgba(11,13,15,.62) 0%, rgba(11,13,15,.34) 30%, rgba(11,13,15,.62) 62%, rgba(11,13,15,.97) 100%)}
 .hero-in{position:relative; z-index:2; width:100%; max-width:var(--maxw); margin-inline:auto; padding:120px var(--pad) 96px}
 .hero .eyebrow{margin-bottom:22px; color:#DDD8CE}
-.hero h1{font-size:clamp(33px,8.6vw,92px); max-width:15ch}
+.hero h1{font-size:clamp(27px,5.4vw,64px); max-width:18ch}
 .hero h1 .cop{color:var(--cop2)}
-.hero .lede{margin-top:16px; max-width:52ch; font-size:clamp(16.5px,1.9vw,20px); color:#F3F0EA; text-shadow:0 1px 14px rgba(0,0,0,.5)}
+.hero .lede{margin-top:14px; max-width:52ch; font-size:clamp(15.5px,1.5vw,17.5px); color:#F3F0EA; text-shadow:0 1px 14px rgba(0,0,0,.5)}
 .hero .loc{margin-top:8px; font-family:var(--fm); font-size:12.5px; letter-spacing:.2em; color:#EFEBE3; text-shadow:0 1px 12px rgba(0,0,0,.55); text-transform:uppercase}
 .hero-cta{display:flex; flex-wrap:wrap; gap:14px; margin-top:28px}
 .hero-cta .btn{flex:1 1 auto}
@@ -122,14 +122,14 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
 
 /* statikus 20+ stat — helyettesíti a forgó badge-et */
 .hero-stat{position:relative; z-index:2; width:100%; max-width:var(--maxw); margin-inline:auto; padding:0 var(--pad) 34px; display:flex; align-items:center; gap:16px; max-height:200px; overflow:hidden}
-.hero-stat .big{font-family:var(--fd); font-size:clamp(40px,7vw,64px); line-height:1; color:var(--cop2); flex:none}
+.hero-stat .big{font-family:var(--fd); font-size:clamp(30px,4.5vw,46px); line-height:1; color:var(--cop2); flex:none}
 .hero-stat .txt{font-family:var(--fm); font-size:12.5px; letter-spacing:.18em; text-transform:uppercase; color:#E5E1D8; line-height:1.7}
 .hero-stat .rule{flex:1; height:1px; background:var(--hair); min-width:30px}
 
 /* ---------- bizalmi sáv ---------- */
 .trust{background:var(--ink2); border-block:1px solid var(--hair2)}
 .trust .wrap{display:grid; grid-template-columns:repeat(2,1fr); gap:0}
-.trust .t{padding:22px 18px; border-bottom:1px solid var(--hair2); font-size:14px; color:var(--dim); display:flex; gap:12px; align-items:baseline}
+.trust .t{padding:18px 14px; border-bottom:1px solid var(--hair2); font-size:13px; color:var(--dim); display:flex; gap:10px; align-items:baseline}
 .trust .t b{font-family:var(--fm); font-size:11px; color:var(--cop2); letter-spacing:.1em; flex:none}
 .trust .t:nth-child(odd){border-right:1px solid var(--hair2)}
 .trust .t:nth-child(3),.trust .t:nth-child(4){border-bottom:0}
@@ -141,9 +141,9 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
 
 /* ---------- RÓLUNK ---------- */
 .ed{display:grid; gap:34px}
-.ed h2{font-size:clamp(34px,6.5vw,72px)}
+.ed h2{font-size:clamp(26px,4.2vw,52px)}
 .ed h2 em{font-style:normal; color:transparent; -webkit-text-stroke:1.5px rgba(237,234,227,.55)}
-.ed .lede{font-size:clamp(16.5px,1.9vw,19.5px); color:var(--dim); max-width:56ch}
+.ed .lede{font-size:clamp(15.5px,1.4vw,17px); color:var(--dim); max-width:58ch}
 .ed-facts{margin-top:8px; border-top:1px solid var(--hair2)}
 .ed-facts div{display:grid; grid-template-columns:86px 1fr; gap:14px; padding-block:14px; border-bottom:1px solid var(--hair2); font-size:14.5px; color:var(--dim)}
 .ed-facts b{font-family:var(--fm); font-size:11px; letter-spacing:.18em; color:var(--cop2); font-weight:500; padding-top:3px}
@@ -154,14 +154,14 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
 
 /* ---------- SZOLGÁLTATÁSOK — tiszta rács, desktop 3 / tablet 2 / mobil 1 ---------- */
 .svc-head{margin-bottom:36px}
-.svc-head h2{font-size:clamp(34px,6.5vw,72px); margin-top:18px}
+.svc-head h2{font-size:clamp(26px,4.2vw,52px); margin-top:16px}
 .svc-head p{margin-top:14px; color:var(--dim); max-width:52ch}
 .svc-grid{display:grid; gap:14px}
 .svc{position:relative; display:flex; flex-direction:column; gap:10px; background:var(--ink2); border:1px solid var(--hair2); padding:26px 24px 24px; transition:border-color .3s}
 .svc:hover{border-color:rgba(200,90,42,.5)}
 .svc .no{font-family:var(--fm); font-size:12px; letter-spacing:.2em; color:var(--cop2)}
-.svc h3{font-size:clamp(21px,2.6vw,28px)}
-.svc p{color:var(--dim); font-size:15px; line-height:1.6; max-width:60ch}
+.svc h3{font-size:clamp(17.5px,1.8vw,22px)}
+.svc p{color:var(--dim); font-size:14px; line-height:1.55; max-width:60ch}
 .svc .roofline{height:2px; width:44px; background:var(--cop); margin-top:auto}
 @media(min-width:680px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:1020px){.svc-grid{grid-template-columns:repeat(3,1fr); gap:16px}.svc{padding:30px 28px 28px}}
@@ -169,7 +169,7 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
 /* ---------- TETŐMETSZET ---------- */
 .blue{background:var(--ink3); border-block:1px solid var(--hair2)}
 .blue .wrap{display:grid; gap:40px}
-.blue h2{font-size:clamp(32px,6vw,64px); margin-top:18px}
+.blue h2{font-size:clamp(25px,4vw,46px); margin-top:16px}
 .blue h2 em{font-style:normal; color:var(--cop2)}
 .blue .lead{margin-top:14px; color:var(--dim); max-width:54ch}
 .blue-panel{border:1px solid rgba(122,150,178,.22); background:rgba(10,14,18,.6); padding:clamp(14px,2.5vw,28px); max-width:760px}
@@ -202,14 +202,14 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
 .decades .bg img{width:100%; height:100%; object-fit:cover; filter:grayscale(1) contrast(1.1) brightness(.4)}
 .decades .bg::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(17,19,21,.82), rgba(17,19,21,.6) 45%, rgba(17,19,21,.88))}
 .decades .wrap{position:relative; z-index:2; padding-block:clamp(64px,9vw,110px); display:grid; gap:22px; justify-items:start}
-.dec-num{font-family:var(--fd); font-size:clamp(88px,16vw,190px); line-height:.9; color:var(--fg)}
+.dec-num{font-family:var(--fd); font-size:clamp(60px,10vw,124px); line-height:.92; color:var(--fg)}
 .dec-num b{color:var(--cop2); font-weight:400}
-.decades h2{font-size:clamp(24px,3.4vw,40px); max-width:22ch}
+.decades h2{font-size:clamp(19px,2.6vw,30px); max-width:26ch}
 .decades p{color:var(--dim); max-width:58ch; font-size:15.5px}
 
 /* ---------- REFERENCIÁK — placeholder kártyák ---------- */
 .refs-head{margin-bottom:36px}
-.refs-head h2{font-size:clamp(34px,6.5vw,72px); margin-top:18px}
+.refs-head h2{font-size:clamp(26px,4.2vw,52px); margin-top:16px}
 .refs-head h2 em{font-style:normal; color:var(--cop2)}
 .refs-note{margin-top:14px; color:var(--faint); font-family:var(--fm); font-size:12px; letter-spacing:.06em; max-width:60ch; line-height:1.7}
 .ref-grid{display:grid; gap:14px}
@@ -220,7 +220,7 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
 .ph-card .mid{align-self:center; text-align:center; color:var(--faint)}
 .ph-card .mid svg{margin-inline:auto; opacity:.5}
 .ph-card .mid span{display:block; margin-top:12px; font-family:var(--fm); font-size:12px; letter-spacing:.3em; text-transform:uppercase}
-.ph-card h3{font-size:20px}
+.ph-card h3{font-size:17.5px}
 .ph-card .cat{display:block; margin-top:6px; font-family:var(--fm); font-size:11px; letter-spacing:.2em; color:var(--dim); text-transform:uppercase}
 @media(min-width:680px){.ref-grid{grid-template-columns:repeat(3,1fr)}.ph-card{min-height:300px}}
 
@@ -230,8 +230,8 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
 .step::before{content:""; position:absolute; left:17px; top:34px; bottom:2px; width:1px; background:var(--hair)}
 .step:last-child::before{display:none}
 .step .sn{position:absolute; left:0; top:0; width:35px; height:35px; border:1px solid var(--cop); color:var(--cop2); font-family:var(--fm); font-size:12px; display:grid; place-items:center; background:var(--ink)}
-.step h3{font-size:20px; margin-bottom:6px; padding-top:4px}
-.step p{color:var(--dim); font-size:15px; max-width:46ch}
+.step h3{font-size:17.5px; margin-bottom:5px; padding-top:6px}
+.step p{color:var(--dim); font-size:14px; max-width:48ch}
 @media(min-width:880px){
   .steps-wrap{grid-template-columns:repeat(4,1fr); gap:clamp(24px,3vw,44px)}
   .step{padding:74px 0 0}
@@ -242,7 +242,7 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
 
 /* ---------- TELJES KÖRŰ KIVITELEZÉS (kémény-ácsmunka rendszer) ---------- */
 .scope{background:var(--ink2); border-block:1px solid var(--hair2)}
-.scope h2{font-size:clamp(34px,6.5vw,72px)}
+.scope h2{font-size:clamp(26px,4.2vw,52px)}
 .scope h2 em{font-style:normal; color:var(--cop2)}
 .scope .lead{margin-top:14px; color:var(--dim); max-width:54ch}
 .chain{margin-top:40px; display:grid; gap:0; max-width:640px}
@@ -250,8 +250,8 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
 .chain .c::before{content:""; position:absolute; left:19px; top:40px; bottom:0; width:1px; background:rgba(200,90,42,.45)}
 .chain .c:last-child::before{display:none}
 .chain .cn{position:relative; z-index:1; width:39px; height:39px; border:1px solid var(--cop); background:var(--ink2); color:var(--cop2); font-family:var(--fm); font-size:12px; display:grid; place-items:center}
-.chain .ct b{display:block; font-family:var(--fd); text-transform:uppercase; font-weight:400; font-size:clamp(18px,2.4vw,24px); line-height:1.2; padding-top:6px}
-.chain .ct span{display:block; color:var(--faint); font-size:13.5px; margin-top:3px}
+.chain .ct b{display:block; font-family:var(--fd); text-transform:uppercase; font-weight:400; font-size:clamp(15.5px,1.6vw,19px); line-height:1.25; padding-top:8px}
+.chain .ct span{display:block; color:var(--faint); font-size:12.5px; margin-top:3px}
 @media(min-width:760px){
   .chain{grid-template-columns:repeat(5,1fr); gap:18px; max-width:none}
   .chain .c{grid-template-columns:1fr; gap:12px; padding-bottom:0}
@@ -263,7 +263,7 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
 }
 
 /* ---------- AJÁNLATKÉRŐ ---------- */
-.cta h2{font-size:clamp(36px,7vw,84px)}
+.cta h2{font-size:clamp(27px,5vw,62px)}
 .cta h2 em{font-style:normal; color:var(--cop2)}
 .cta .lead{margin-top:16px; color:var(--dim); max-width:50ch}
 .cta-grid{display:grid; gap:40px; margin-top:40px}
@@ -280,7 +280,7 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
 .qform{display:grid; gap:0; border:1px solid var(--hair2); margin-top:22px}
 .frow{position:relative; border-bottom:1px solid var(--hair2)}
 .frow label{position:absolute; top:12px; left:16px; font-family:var(--fm); font-size:10px; letter-spacing:.24em; color:var(--faint); text-transform:uppercase}
-.frow input{width:100%; background:transparent; border:0; color:var(--fg); font-family:var(--fb); font-size:17px; padding:30px 16px 13px; outline:none}
+.frow input{width:100%; background:transparent; border:0; color:var(--fg); font-family:var(--fb); font-size:16px; padding:27px 16px 12px; outline:none}
 .frow:focus-within{background:rgba(200,90,42,.05)}
 .frow:focus-within label{color:var(--cop2)}
 .fsubmit{display:flex; flex-direction:column; gap:14px; padding:18px}
@@ -290,14 +290,14 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
 
 /* ---------- FOOTER ---------- */
 .footer{background:var(--ink3); border-top:1px solid var(--hair2); padding-top:var(--sec)}
-.footer h2{font-size:clamp(38px,8.5vw,110px)}
+.footer h2{font-size:clamp(28px,6vw,78px)}
 .footer h2 a:hover{color:var(--cop2)}
 .footer h2 .arr{color:var(--cop2)}
 .f-grid{display:grid; gap:30px; margin-top:44px; padding-top:36px; border-top:1px solid var(--hair2)}
 .f-grid .fl{font-family:var(--fm); font-size:10.5px; letter-spacing:.26em; color:var(--faint); text-transform:uppercase; display:block; margin-bottom:12px}
-.f-grid a.big{font-family:var(--fd); text-transform:uppercase; font-size:clamp(19px,3.4vw,28px); display:inline-block; line-height:1.3}
+.f-grid a.big{font-family:var(--fd); text-transform:uppercase; font-size:clamp(16px,2vw,22px); display:inline-block; line-height:1.35}
 .f-grid a.big:hover{color:var(--cop2)}
-.f-grid p{color:var(--dim); font-size:14.5px; max-width:40ch}
+.f-grid p{color:var(--dim); font-size:13.5px; max-width:40ch}
 .f-bottom{display:flex; flex-wrap:wrap; gap:10px 28px; justify-content:space-between; padding-block:22px; margin-top:40px; border-top:1px solid var(--hair2); font-family:var(--fm); font-size:11px; letter-spacing:.12em; color:var(--faint); text-transform:uppercase}
 @media(min-width:760px){.f-grid{grid-template-columns:repeat(3,1fr)}}
 
@@ -709,7 +709,7 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
       </div>
       <div>
         <span class="fl">Helyszín</span>
-        <p style="font-family:var(--fd); text-transform:uppercase; font-size:clamp(19px,3.4vw,28px); color:var(--fg); line-height:1.3">Hajdúsámson</p>
+        <p style="font-family:var(--fd); text-transform:uppercase; font-size:clamp(16px,2vw,22px); color:var(--fg); line-height:1.35">Hajdúsámson</p>
         <p>Hajdú-Bihar megye · Debrecen és környéke</p>
       </div>
     </div>
