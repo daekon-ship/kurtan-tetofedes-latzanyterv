@@ -157,8 +157,8 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
 .svc-head h2{font-size:clamp(26px,4.2vw,52px); margin-top:16px}
 .svc-head p{margin-top:14px; color:var(--dim); max-width:52ch}
 .svc-grid{display:grid; gap:14px}
-.svc{position:relative; display:flex; flex-direction:column; gap:10px; background:var(--ink2); border:1px solid var(--hair2); padding:26px 24px 24px; transition:border-color .3s}
-.svc:hover{border-color:rgba(200,90,42,.5)}
+.svc{position:relative; display:flex; flex-direction:column; gap:10px; background:var(--ink2); border:1px solid var(--hair2); padding:26px 24px 24px; transition:border-color .3s, transform .3s}
+.svc:hover{border-color:rgba(200,90,42,.5); transform:translateY(-3px)}
 .svc .no{font-family:var(--fm); font-size:12px; letter-spacing:.2em; color:var(--cop2)}
 .svc h3{font-size:clamp(17.5px,1.8vw,22px)}
 .svc p{color:var(--dim); font-size:14px; line-height:1.55; max-width:60ch}
@@ -169,6 +169,7 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
 /* ---------- TETŐMETSZET ---------- */
 .blue{background:var(--ink3); border-block:1px solid var(--hair2)}
 .blue .wrap{display:grid; gap:40px}
+@media(max-width:959px){.blue .wrap>.hb-list{order:3}.blue .wrap>.blue-panel{order:2}}
 .blue h2{font-size:clamp(25px,4vw,46px); margin-top:16px}
 .blue h2 em{font-style:normal; color:var(--cop2)}
 .blue .lead{margin-top:14px; color:var(--dim); max-width:54ch}
@@ -180,7 +181,7 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
 .house.in .draw{stroke-dashoffset:0}
 .house .hot{cursor:pointer}
 .house .hot .dot{fill:var(--cop); transition:transform .3s var(--ease); transform-box:fill-box; transform-origin:center}
-.house .hot .halo{fill:none; stroke:var(--cop); stroke-width:1.4; opacity:0; transition:opacity .3s}
+.house .hot .halo{fill:rgba(200,90,42,0); stroke:var(--cop); stroke-width:1.4; opacity:0; transition:opacity .3s; pointer-events:all}
 .house .hot.on .halo,.house .hot:hover .halo{opacity:1}
 .house .hot.on .dot,.house .hot:hover .dot{transform:scale(1.45)}
 .house .hot text{font-family:var(--fm); font-size:9px; fill:rgba(237,234,227,.6); letter-spacing:.1em}
@@ -222,6 +223,9 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
 .ph-card .mid span{display:block; margin-top:12px; font-family:var(--fm); font-size:12px; letter-spacing:.3em; text-transform:uppercase}
 .ph-card h3{font-size:17.5px}
 .ph-card .cat{display:block; margin-top:6px; font-family:var(--fm); font-size:11px; letter-spacing:.2em; color:var(--dim); text-transform:uppercase}
+.ph-card::before,.ph-card::after{content:""; position:absolute; width:14px; height:14px; border:1px solid var(--hair); pointer-events:none}
+.ph-card::before{top:9px; left:9px; border-right:0; border-bottom:0}
+.ph-card::after{bottom:9px; right:9px; border-left:0; border-top:0}
 @media(min-width:680px){.ref-grid{grid-template-columns:repeat(3,1fr)}.ph-card{min-height:300px}}
 
 /* ---------- FOLYAMAT — mobil: függőleges vonalas; desktop: 4 oszlop ---------- */
@@ -255,8 +259,7 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
 @media(min-width:760px){
   .chain{grid-template-columns:repeat(5,1fr); gap:18px; max-width:none}
   .chain .c{grid-template-columns:1fr; gap:12px; padding-bottom:0}
-  .chain .c::before{left:19px; top:44px; bottom:auto; height:calc(100% - 44px)}
-  .chain .c:nth-last-child(2)::before{display:none}
+  .chain .c::before{left:39px; right:-18px; top:19px; bottom:auto; width:auto; height:1px; background:rgba(200,90,42,.4)}
   .chain .c:last-child::before{display:none}
   .chain .cn{width:39px}
   .chain .ct b{padding-top:0; font-size:19px}
@@ -274,6 +277,10 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
 .direct a:hover{border-color:var(--cop); color:var(--fg)}
 .direct a b{color:var(--fg); font-weight:500}
 .direct svg{color:var(--cop2); flex:none}
+.cta-facts{margin-top:30px; border-top:1px solid var(--hair2)}
+.cta-facts>div{display:grid; grid-template-columns:64px 1fr; gap:14px; padding-block:13px; border-bottom:1px solid var(--hair2); font-size:14px; color:var(--dim)}
+.cta-facts b{font-family:var(--fm); font-size:11px; letter-spacing:.18em; color:var(--cop2); font-weight:500; padding-top:3px}
+.cta-facts .cfl{display:block; font-family:var(--fm); font-size:10.5px; letter-spacing:.26em; color:var(--faint); text-transform:uppercase; margin-bottom:10px}
 .chips{display:flex; flex-wrap:wrap; gap:10px}
 .chip{font-family:var(--fm); font-size:12.5px; letter-spacing:.1em; text-transform:uppercase; padding:12px 18px; border:1px solid var(--hair); color:var(--dim); transition:all .25s; min-height:44px}
 .chip.on{background:var(--cop); border-color:var(--cop); color:#17110B; font-weight:500}
@@ -292,8 +299,10 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
 .footer{background:var(--ink3); border-top:1px solid var(--hair2); padding-top:var(--sec)}
 .f-grid{display:grid; gap:30px; padding-top:36px; border-top:1px solid var(--hair2)}
 .f-grid .fl{font-family:var(--fm); font-size:10.5px; letter-spacing:.26em; color:var(--faint); text-transform:uppercase; display:block; margin-bottom:12px}
-.f-grid a.big{font-family:var(--fd); text-transform:uppercase; font-size:clamp(16px,2vw,22px); display:inline-block; line-height:1.35}
+.f-grid .big{font-family:var(--fd); text-transform:uppercase; font-size:clamp(17px,2.2vw,26px); display:inline-block; line-height:1.35; letter-spacing:.01em; overflow-wrap:anywhere}
 .f-grid a.big:hover{color:var(--cop2)}
+.f-cta{display:flex; flex-wrap:wrap; align-items:center; gap:18px; margin-top:46px}
+.f-cta .fnote{font-family:var(--fm); font-size:11px; letter-spacing:.16em; color:var(--faint); text-transform:uppercase}
 .f-grid p{color:var(--dim); font-size:13.5px; max-width:40ch}
 .f-bottom{display:flex; flex-wrap:wrap; gap:10px 28px; justify-content:space-between; padding-block:22px; margin-top:40px; border-top:1px solid var(--hair2); font-family:var(--fm); font-size:11px; letter-spacing:.12em; color:var(--faint); text-transform:uppercase}
 @media(min-width:760px){.f-grid{grid-template-columns:repeat(3,1fr)}}
@@ -558,7 +567,7 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
     <div class="refs-head js-in">
       <p class="eyebrow" data-reveal><span><b class="n">05</b> Referenciák</span><span class="rule" aria-hidden="true"></span></p>
       <h2 data-reveal style="--d:.08s">A munka beszél <em>helyettünk.</em></h2>
-      <p class="refs-note" data-reveal style="--d:.16s">Valódi referenciafotóink feltöltés alatt — az oldal éles indítása előtt itt jelennek meg saját munkáink dokumentálva.</p>
+      <p class="refs-note" data-reveal style="--d:.16s">Valódi referenciafotóink feltöltés alatt — az oldal éles indítása előtt itt jelennek meg saját munkáink dokumentálva. Addig is szívesen mutatunk kész munkákat telefonon, vagy a helyszíni felmérésen.</p></p>
     </div>
     <div class="ref-grid">
       <article class="ph-card" data-reveal>
@@ -657,6 +666,11 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="1"/><path d="m2 6 10 7L22 6"/></svg>
           <span><b>kurtan.karoly@gmail.com</b><br>visszahívást kérünk</span>
         </a>
+        <div class="cta-facts">
+          <div><b>24 ÓRA</b><span>Visszahívás ezen belül munkanapon — sokszor hamarabb.</span></div>
+          <div><b>0 FT</b><span>A helyszíni felmérés és a tételes ajánlat díjmentes.</span></div>
+          <div><b>EGY KÉZ</b><span>A felméréstől az átadásig ugyanaz a mester viszi a munkát.</span></div>
+        </div>
       </div>
       <div data-reveal style="--d:.15s">
         <div class="chips" id="chips" role="group" aria-label="Milyen munkához van szüksége?">
@@ -697,7 +711,7 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
       </div>
       <div>
         <span class="fl">E-mail</span>
-        <a class="big" href="mailto:kurtan.karoly@gmail.com">kurtan.karoly@gmail.com</a>
+        <a class="big" style="text-transform:none" href="mailto:kurtan.karoly@gmail.com">kurtan.karoly@gmail.com</a>
         <p>Írja meg röviden, mi a gond — visszakeressük.</p>
       </div>
       <div>
@@ -705,6 +719,12 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
         <p style="font-family:var(--fd); text-transform:uppercase; font-size:clamp(16px,2vw,22px); color:var(--fg); line-height:1.35">Hajdúsámson</p>
         <p>Hajdú-Bihar megye · Debrecen és környéke</p>
       </div>
+    </div>
+    <div class="f-cta" data-reveal>
+      <a class="btn btn-solid" href="#ajanlat">Helyszíni felmérést kérek
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <span class="fnote">Ingyenes · tételes ajánlattal</span>
     </div>
     <div class="f-bottom">
       <span>© <span id="year">2026</span> Kurtán Károly — Tetőfedés</span>
