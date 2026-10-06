@@ -147,13 +147,14 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
 /* ---------- bizalmi sáv ---------- */
 .trust{background:var(--ink2); border-block:1px solid var(--hair2)}
 .trust .wrap{display:grid; grid-template-columns:repeat(2,1fr); gap:0}
-.trust .t{padding:18px 14px; border-bottom:1px solid var(--hair2); font-size:13.5px; color:var(--fg); display:flex; gap:10px; align-items:baseline}
-.trust .t b{font-family:var(--fm); font-size:11px; color:var(--cop2); letter-spacing:.1em; flex:none}
+.trust .t{display:flex; flex-direction:column; justify-content:center; align-items:flex-start; gap:7px; min-height:96px; padding:18px 16px; border-bottom:1px solid var(--hair2)}
+.trust .t b{font-family:var(--fm); font-size:12px; color:var(--cop2); letter-spacing:.14em; font-weight:500; line-height:1; white-space:nowrap}
+.trust .t span{font-size:13px; color:var(--dim); line-height:1.45}
 .trust .t:nth-child(odd){border-right:1px solid var(--hair2)}
 .trust .t:nth-child(3),.trust .t:nth-child(4){border-bottom:0}
 @media(min-width:760px){
   .trust .wrap{grid-template-columns:repeat(4,1fr)}
-  .trust .t{border-right:1px solid var(--hair2); border-bottom:0; padding-block:26px}
+  .trust .t{min-height:0; border-right:1px solid var(--hair2); border-bottom:0; padding:26px 18px}
   .trust .t:last-child{border-right:0}
 }
 
@@ -456,10 +457,10 @@ body.menu-open .burger span:nth-child(3){top:22px; transform:rotate(-45deg)}
 <!-- BIZALMI SÁV -->
 <div class="trust" aria-label="Bizalmi tényezők">
   <div class="wrap">
-    <p class="t"><b>20+</b> év tapasztalat</p>
-    <p class="t"><b>INGYENES</b> helyszíni felmérés</p>
-    <p class="t"><b>TÉTELES</b> ajánlat</p>
-    <p class="t"><b>EGY KÉZBEN</b> a teljes tetőmunka</p>
+    <p class="t"><b>20+</b><span>év tapasztalat</span></p>
+    <p class="t"><b>INGYENES</b><span>helyszíni felmérés</span></p>
+    <p class="t"><b>TÉTELES</b><span>árajánlat</span></p>
+    <p class="t"><b>EGY KÉZBEN</b><span>teljes tetőmunka</span></p>
   </div>
 </div>
 
